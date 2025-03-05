@@ -15,7 +15,26 @@ const QuizInterface = () => {
           options: ['Paris', 'London', 'Berlin', 'Madrid'],
           answer: 'Paris',
         },
-        // Add more questions here
+        {
+          question: 'What is 2 + 2?',
+          options: ['3', '4', '5', '6'],
+          answer: '4',
+        },
+        {
+          question: 'What is the largest planet in our solar system?',
+          options: ['Earth', 'Mars', 'Jupiter', 'Saturn'],
+          answer: 'Jupiter',
+        },
+        {
+          question: 'What is the boiling point of water?',
+          options: ['90°C', '100°C', '110°C', '120°C'],
+          answer: '100°C',
+        },
+        {
+          question: 'What is the chemical symbol for gold?',
+          options: ['Au', 'Ag', 'Pb', 'Fe'],
+          answer: 'Au',
+        },
       ];
       setQuestions(fetchedQuestions);
     };
