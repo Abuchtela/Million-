@@ -15,9 +15,6 @@
 3. **Deployment**: Platforms like Vercel or Netlify
 4. **Optional**: Blockchain integration (later) if you want an automated prize distribution system
 
-## Purple Degen Hat Graphics
-
-The game will feature purple Degen hat graphics for avatars and UI elements to enhance the visual appeal and theme.
 
 ## Project Description
 
