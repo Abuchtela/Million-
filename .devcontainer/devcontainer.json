@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "build": "npm install && npm run build",
+    "build": "npm install && npm run build && dotnet tool install -g Microsoft.DotNet.Helix.Sdk",
     "test": "cat package.json",
-    "launch": "npm start"
+    "launch": "npm start && dotnet helix"
   }
 }

@@ -34,6 +34,10 @@ Million- is an interactive quiz game where users can sign up, log in, and partic
    ```
    npm install
    ```
+4. Install .NET Helix:
+   ```
+   dotnet tool install -g Microsoft.DotNet.Helix.Sdk
+   ```
 
 ## Usage Instructions
 
