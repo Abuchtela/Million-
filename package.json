@@ -16,7 +16,7 @@
     "firebase": "^8.6.8"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-react": "^7.24.0"
   }
 }
