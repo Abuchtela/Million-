@@ -7,9 +7,16 @@ const Leaderboard = () => {
 
   useEffect(() => {
     const fetchLeaderboard = async () => {
-      const leaderboardData = await firebase.getLeaderboard();
-      setLeaderboard(leaderboardData);
-      determineDailyWinner(leaderboardData);
+      try {
+        const leaderboardData = await firebase.getLeaderboard();
+        if (leaderboardData) {
+          setLeaderboard(leaderboardData);
+          determineDailyWinner(leaderboardData);
+        }
+      } catch (error) {
+        console.error('Error fetching leaderboard:', error);
+        // Consider setting an error state and displaying a message to the user
+      }
     };
 
     fetchLeaderboard();
