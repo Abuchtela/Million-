@@ -1,9 +1,10 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { getFirestore, collection, addDoc, doc, setDoc, orderBy, limit, getDocs, query } from 'firebase/firestore';
 
-const auth = firebase.auth();
-const firestore = firebase.firestore();
+const app = initializeApp(/* your firebase config */);
+const auth = getAuth(app);
+const firestore = getFirestore(app);
 
 const signup = async (email, password) => {
   try {
