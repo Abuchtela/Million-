@@ -7,9 +7,11 @@ const firestore = firebase.firestore();
 
 const signup = async (email, password) => {
   try {
-    await auth.createUserWithEmailAndPassword(email, password);
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    return { success: true, user: userCredential.user };
   } catch (error) {
     console.error('Error signing up:', error);
+    return { success: false, error: error.message };
   }
 };
 
