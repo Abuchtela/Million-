@@ -18,9 +18,11 @@ const signup = async (email, password) => {
 
 const login = async (email, password) => {
   try {
-    await auth.signInWithEmailAndPassword(email, password);
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    return { success: true, user: userCredential.user };
   } catch (error) {
     console.error('Error logging in:', error);
+    return { success: false, error: error.message };
   }
 };
 
